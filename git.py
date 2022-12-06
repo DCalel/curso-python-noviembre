@@ -3,3 +3,4 @@
 #Se agregan cambios para inscribir alumnos
 
 #Se agrega cambio a remoto
+#Se agrega cambio solo para local
