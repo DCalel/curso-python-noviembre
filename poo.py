@@ -11,12 +11,14 @@ class Casa():
     def __init__(self, is_registrada):
         self.registrada = is_registrada
 
+    # Muestra un mensaje cuando entendible cuando se llama
+    # la funcion print(casa)
     def __str__(self) -> str:
         return f"""
-        Esta es una casa
-        El dueño es {self.dueño}
-        El color es {self.color}
-        """
+Esta es una casa
+El dueño es {self.dueño}
+El color es {self.color}
+"""
 
     def __repr__(self) -> str:
         return f"Casa numero {self.numeracion}"
@@ -29,6 +31,7 @@ class Casa():
         self.dueño = nuevo_dueño
         return print("Casa vendida exitosamente")
 
+    # Privado porque comienza con __
     def __entregar_llaves(self):
         print("Se entregan las llaves de la casa")
 
@@ -48,7 +51,7 @@ print("\n")
 print(type(casa1))
 print(casa1.color)
 print(casa1.numeracion)
-casa1.numeracion = "A1"
+#casa1.numeracion = "A1"
 print(casa1.numeracion)
 
 casa1.pintar("Azul")
