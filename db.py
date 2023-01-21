@@ -25,7 +25,7 @@ class Alumno(Base):
 
     # back_populates="alumno" hace referencia a:
     # alumno = relationship("Alumno", back_populates="notas") de la clase "Nota"
-    # El primer parametro hace referencia a la tabla
+    # El primer parametro hace referencia al nombre de la clase que se quiere relacionar
     notas = relationship("Nota", back_populates="alumno")
 
     # IMPORTANTE no lleva parentesis al momento de llamarlo
@@ -41,7 +41,7 @@ class Nota(Base):
     curso = Column(String, nullable=False)
     # Campo relacionada con la tabla "alumnos" especificamente en el campo "id"
     alumno_id = Column(Integer, ForeignKey("alumnos.id"))
-    # El primer parametro hace referencia a la tabla
+    # El primer parametro hace referencia al nombre de la clase que se quiere relacionar
     alumno = relationship("Alumno", back_populates="notas")
 
 
